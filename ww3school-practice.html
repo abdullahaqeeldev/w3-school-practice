@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .nav {
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        display: inline-block;
+
+    }
+
+    .nav img {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .icons {
+        width: 800px;
+        display: inline-block;
+    }
+
+
+
+    .icons ul li a {
+
+
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .icons ul li {
+        font-family: "Poppins", serif;
+        display: inline-block;
+        padding: 15px;
+    }
+
+    .icons ul li:hover {
+        background-color: rgb(6, 216, 128);
+
+
+    }
+
+    .icons input {
+        width: 250px;
+        margin-left: 20px;
+        height: 50px;
+        border-radius: 20px;
+        background-image: url(icons8-search-64.png);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        border: 1px solid black;
+        margin-left: 30px;
+    }
+
+    .icons input::placeholder {
+        padding-left: 10px;
+    }
+
+    .icons input:focus {
+        background-image: none;
+        padding-left: 10px;
+
+    }
+
+    .button1 {
+        display: inline-block;
+    }
+
+    .button1 button {
+        display: inline-block;
+        font-family: "Poppins", serif;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+    }
+
+    .button1 button:hover {
+        border: 1px solid black;
+
+    }
+
+    .button2 {
+        margin-left: 40px;
+        display: inline-block;
+    }
+
+    .button2 button {
+        display: inline-block;
+        font-family: "Poppins", serif;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+    }
+
+    .button2 button:hover {
+        background-color: rgb(6, 216, 128);
+
+    }
+
+    .dropdown {
+        
+        
+        position: absolute;
+        margin-left: -15px;
+        margin-top: 15px;
+        display: none;
+
+
+        background-color: rgb(218, 217, 217);
+    }
+
+    .dropdown ul {
+    
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .dropdown ul li {
+
+        display: block;
+    }
+
+    li:hover .dropdown {
+        display: block;
+    }
+
+    .dropdown2 {
+        position: absolute;
+        margin-left: -15px;
+        margin-top: 15px;
+        display: none;
+
+        background-color: rgb(218, 217, 217);
+    }
+
+
+    .dropdown2 ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .dropdown2 ul li {
+
+        display: block;
+    }
+
+    li:hover .dropdown2 {
+        display: block;
+    }
+
+    .first {
+        position: absolute;
+        margin-left: 100px;
+        margin-top: 15px;
+        display: none;
+        border-left: 1px solid black;
+
+        background-color: rgb(218, 217, 217);
+    }
+
+
+    .first ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .first ul li {
+        display: block;
+    }
+
+    li:hover .first {
+        display: block;
+    }
+
+    .second {
+        position: absolute;
+        margin-left: 175px;
+        margin-top: 15px;
+        display: none;
+        border-left: 1px solid black;
+
+        background-color: rgb(218, 217, 217);
+    }
+
+
+    .second ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .second ul li {
+
+        display: block;
+    }
+
+    li:hover .second {
+        display: block;
+    }
+
+    .dropdown3 {
+        position: absolute;
+        margin-left: -15px;
+        margin-top: 15px;
+        display: none;
+
+        background-color: rgb(218, 217, 217);
+    }
+
+
+    .dropdown3 ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .dropdown3 ul li {
+
+        display: block;
+    }
+
+    li:hover .dropdown3 {
+        display: block;
+    }
+
+    .third {
+        position: absolute;
+        margin-left: 140px;
+        margin-top: 15px;
+        display: none;
+        border-left: 1px solid black;
+
+        background-color: rgb(218, 217, 217);
+    }
+
+
+    .third ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .third ul li {
+
+        display: block;
+    }
+
+    li:hover .third {
+        display: block;
+    }
+
+    .fourth {
+        position: absolute;
+        margin-left: 280px;
+        margin-top: 15px;
+        display: none;
+        border-left: 1px solid black;
+
+        background-color: rgb(218, 217, 217);
+    }
+
+
+    .fourth ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .fourth ul li {
+
+        display: block;
+    }
+
+    li:hover .fourth {
+        display: block;
+    }
+
+
+
+    .nav2 {
+
+
+
+        width: 100%;
+        background-color: rgb(41, 41, 41);
+        display: inline-block;
+
+
+    }
+
+
+
+    .nav2 ul li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .nav2 ul {
+        margin-left: 15px;
+    }
+
+    .nav2 ul li {
+        background-color: rgb(41, 41, 41);
+        font-family: "Poppins", serif;
+        display: inline-block;
+        padding: 5px 9px;
+
+
+
+
+    }
+
+    .nav2 ul li a {
+        color: white;
+    }
+
+    .nav2 ul li:hover {
+        background-color: rgb(20, 20, 20);
+
+
+    }
+
+    aside {
+        position: fixed;
+        top: 100px;
+        z-index: -1;
+        
+      
+        display: inline-block;
+    }
+
+    .list {
+        
+        
+       
+        overflow-y: scroll;
+        
+        background-color: gainsboro;
+        width: 250px;
+        height: 800px;
+        
+
+    }
+
+    .list h1 {
+        margin-left: 15px;
+        text-align: left;
+        font-family: "Poppins", serif;
+        font-weight: 400;
+    }
+
+    .list ul {
+        margin-top: 10px;
+
+    }
+
+    .list ul li {
+        list-style: none;
+        font-family: "Poppins", serif;
+        padding: 2px 15px 2px 50px;
+    }
+
+    .list ul li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .list ul li:hover {
+        background-color: rgb(175, 176, 177);
+    }
+
+    section {
+        height: 800px;
+        width: 1015px;
+       display: inline-block;
+       float: right;
+    }
+
+    .info {
+        height: 250px;
+        width: 1015px;
+    }
+
+    .info h1 {
+        font-family: "Poppins", serif;
+        font-size: 50px;
+        font-weight: 400;
+        padding-top: 100px;
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    .info .two {
+        background-color: rgb(4, 173, 103);
+        padding: 15px 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "Poppins", serif;
+        border-radius: 5px;
+        margin-left: 20px;
+
+    }
+
+    .info .two {
+        margin-left: 600px;
+    }
+
+    .info .two:hover {
+        background-color: rgb(4, 204, 121);
+    }
+
+    .info .one {
+
+        background-color: rgb(4, 173, 103);
+        padding: 15px 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "Poppins", serif;
+        border-radius: 5px;
+        margin-left: 20px;
+
+    }
+
+
+
+    .info .one:hover {
+        background-color: rgb(4, 204, 121);
+    }
+
+    .about {
+
+        margin-top: 30px;
+        background-color: rgb(185, 250, 228);
+        height: 250px;
+        width: 800px;
+
+
+    }
+
+    .about p {
+        padding-top: 30px;
+        padding-left: 30px;
+        font-family: "Poppins", serif;
+        margin-bottom: 10px;
+
+    }
+
+    .three {
+        
+        background-color: rgb(4, 173, 103);
+        padding: 15px 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "Poppins", serif;
+        border-radius: 5px;
+        margin-left: 30px;
+
+
+
+    }
+
+    .about a:hover {
+        background-color: rgb(4, 204, 121);
+
+    }
+
+    hr {
+        margin-top: 50px;
+    }
+
+    .example-heading {
+        margin-top: 10px;
+        margin-left: 30px;
+        font-family: "Poppins", serif;
+    }
+
+    .example-heading h1 {
+        font-weight: 500;
+    }
+
+    .example-heading h4 {
+        font-weight: 400;
+    }
+
+    .example {
+        background-color: rgb(219, 214, 214);
+        height: 500px;
+        width: 800px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+    }
+
+    .code {
+        margin-top: 30px;
+        width: 750px;
+        background-color: white;
+        margin-left: 30px;
+        border-radius: 10px;
+    }
+
+    .example h1 {
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+
+    .code-example {
+        padding-top: 10px;
+        padding-left: 20px;
+        margin-bottom: 50px;
+
+
+    }
+
+    .code-example p {
+        font-family: "Poppins", serif;
+        padding-top: 5px;
+
+    }
+
+    .example a {
+        
+        background-color: rgb(4, 173, 103);
+        padding: 15px 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "Poppins", serif;
+        border-radius: 5px;
+        margin-left: 30px;
+    }
+    .example a:hover{
+        background-color: rgb(7, 197, 118);
+    }
+    p{
+        font-family: "Poppins", serif;
+        margin-left: 30px;
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="nav">
+            <img src="download (5).png" alt="">
+            <div class="icons">
+                <ul>
+                    <li><a href="#">Toturials</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="#">HTML</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">CSS</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Javascript</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Exercise</a>
+                        <div class="dropdown2">
+                            <ul>
+                                <li><a href="#">bootstrap3</a></li>
+
+                                <li><a href="#">nodejs</a></li>
+
+                                <li><a href="#">JQuery</a></li>
+                            </ul>
+                        </div>
+                        <div class="first">
+                            <ul>
+                                <li><a href="#">DSA</a></li>
+
+                                <li><a href="#">EXCEL</a></li>
+
+                                <li><a href="#">React</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    </li>
+                    <li><a href="#">Certicates</a>
+                        <div class="dropdown2">
+                            <ul>
+                                <li><a href="#">bootstrap3</a></li>
+
+                                <li><a href="#">nodejs</a></li>
+
+                                <li><a href="#">JQuery</a></li>
+                            </ul>
+                        </div>
+                        <div class="first">
+                            <ul>
+                                <li><a href="#">DSA</a></li>
+
+                                <li><a href="#">EXCEL</a></li>
+
+                                <li><a href="#">React</a></li>
+                            </ul>
+                        </div>
+                        <div class="second">
+                            <ul>
+                                <li><a href="#">Data analytical</a></li>
+
+                                <li><a href="#">Python</a></li>
+
+                                <li><a href="#">pandas</a></li>
+                            </ul>
+
+                        </div>
+
+                    </li>
+                    <li><a href="#">Services</a>
+                        <div class="dropdown3">
+                            <ul>
+                                <li><a href="#">Free toturial</a></li>
+
+                                <li><a href="#">Refrence</a></li>
+
+                                <li><a href="#">Creat a wesbite</a></li>
+                            </ul>
+                        </div>
+                        <div class="third">
+                            <ul>
+                                <li><a href="#">Exercise</a></li>
+
+                                <li><a href="#">Quizes</a></li>
+
+                                <li><a href="#">Get Certificats</a></li>
+                            </ul>
+                        </div>
+                        <div class="fourth">
+                            <ul>
+                                <li><a href="#">login\signup</a></li>
+
+                                <li><a href="#">My learning</a></li>
+
+                                <li><a href="#">Upgrade</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+                    <label for="search"><input type="search" placeholder="Search..."></label>
+                </ul>
+            </div>
+
+            <div class="button1">
+                <button>for teacher</button>
+                <button>get certified</button>
+            </div>
+            <div class="button2">
+                <button>signup</button>
+                <button>login</button>
+
+            </div>
+        </div>
+        <div class="nav2">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">C++</a></li>
+                <li><a href="#">C#</a></li>
+                <li><a href="#">JAVASCRIPT</a></li>
+                <li><a href="#">Nodejs</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Jquery</a></li>
+                <li><a href="#">Mongodb</a></li>
+                <li><a href="#">HOW to</a></li>
+                <li><a href="#">DSA</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">MYSQL</a></li>
+                <li><a href="#">Bootsrap</a></li>
+                <li><a href="#">Php</a></li>
+                <li><a href="#">EXCEl</a></li>
+                <li><a href="#">C</a></li>
+
+            </ul>
+
+
+        </div>
+    </header>
+    <br>
+    <aside>
+        <div class="list">
+            <h1>HTML Toturial</h1>
+            <ul>
+                <li><a href="#">HTML Introduction</a></li>
+                <li><a href="#">HTML Editors </a></li>
+                <li><a href="#">HTML Basic</a></li>
+                <li><a href="#">HTML HOME</a></li>
+                <li><a href="#">HTML Elements</a></li>
+                <li><a href="#">HTML Headings</a></li>
+                <li><a href="#">HTML Paragraphs</a></li>
+                <li><a href="#">HTML Styles</a></li>
+                <li><a href="#">HTML Formatting</a></li>
+                <li><a href="#">HTML Quotations</a></li>
+                <li><a href="#">HTML Comments</a></li>
+                <li><a href="#">HTML Colors</a></li>
+                <li><a href="#">HTML CSS</a></li>
+                <li><a href="#">HTML Links</a></li>
+                <li><a href="#">HTML Images</a></li>
+                <li><a href="#">HTML Favicon</a></li>
+                <li><a href="#">HTML Page Title</a></li>
+                <li><a href="#">HTML Lists</a></li>
+                <li><a href="#">HTML Block & Inline</a></li>
+                <li><a href="#">HTML Div</a></li>
+                <li><a href="#">HTML Classes</a></li>
+                <li><a href="#">HTML Id</a></li>
+                <li><a href="#">HTML Iframes</a></li>
+                <li><a href="#">HTML JavaScript</a></li>
+                <li><a href="#">HTML File Paths</a></li>
+                <li><a href="#">HTML Head</a></li>
+                <li><a href="#"> HTML Layout</a></li>
+                <li><a href="#"> HTML Responsive</a></li>
+                <li><a href="#"> HTML Computercode</a></li>
+                <li> <a href="#">HTML Semantics</a></li>
+                <li> <a href="#">HTML Style Guide</a></li>
+                <li><a href="#"> HTML Entities</a></li>
+                <li> <a href="#">HTML Symbols</a></li>
+                <li><a href="#"> HTML Emojis</a></li>
+                <li> <a href="#"> HTML Charsets</a></li>
+                <li><a href="#"> HTML URL Encode</a></li>
+                <li> <a href="#"> HTML vs. XHTML</a></li>
+
+            </ul>
+
+        </div>
+    </aside>
+    <br>
+    <section>
+        <div class="info">
+            <h1>HTML Tutorial</h1>
+            <a class="one" href="#">Home</a>
+            <a class="two" href="#">Next</a>
+
+
+        </div>
+        <div class="about">
+            <p>HTML is the standard markup language for Web pages.</p>
+            <p>With HTML you can create your own Website.</p>
+            <p>HTML is easy to learn - You will enjoy it!</p>
+            <a class="three" href="#">Start Learning HTML now >></a>
+
+        </div>
+        <hr>
+        <div class="example-heading">
+            <h1>Easy Learning with HTML "Try it Yourself"</h1>
+            <h4>With our "Try it Yourself" editor, you can edit the HTML code and view the result:</h4>
+
+        </div>
+        <div class="example">
+            <h1>Example</h1>
+            <div class="code">
+                <div class="code-example">
+                    <p>
+                    <p> DOCTYPE html</p>
+                    <p>html</p>
+                    <p>head</p>
+                    <p>titlePage Title</p>
+                    <p>head</p>
+                    <p>body</p>
+
+                    <p>h1This is a Heading</p>
+                    <p>This is a paragraph.</p>
+
+                    <p>body</p>
+                    <p>htm></p>
+                    </p>
+                </div>
+            </div>
+            <a href="#">Try it yourself >></a>
+        </div>
+        <p>Click on the "Try it Yourself" button to see how it works.</p>
+        <hr>
+        
+        
+    </section>
+</body>
+
+</html>
